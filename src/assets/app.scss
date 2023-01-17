@@ -1,0 +1,15 @@
+//Base
+@import url('./base/colors.scss');
+@import url('./base/typography.scss');
+@import url('./base/general.scss');
+
+//Components
+@import url('./components/cards.scss');
+
+//Layout
+@import url('./layout/header.scss');
+@import url('./layout/main.scss');
+@import url('./layout/footer.scss');
+
+//Pages
+@import url('./pages/home.scss');
