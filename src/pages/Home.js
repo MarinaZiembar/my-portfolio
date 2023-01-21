@@ -3,8 +3,10 @@ import { useEffect, useState } from "react";
 
 function Home() {
 
+  //States
   const [className, setClassName] = useState("home-first");
 
+  //Methods
   const changeClassName = (className) => {
     if(className === "home-first"){
       setTimeout(() => setClassName("home-second"),2000);
@@ -20,16 +22,16 @@ function Home() {
     }
   }
 
+  //Effects
   useEffect(() => {
     className !== "home-fourth" && changeClassName(className);
   },[className])
-
   
   
   return (
     <div className={className}>
       <div className="data-container">
-        <p className="animate__animated animate__fadeInUp hola">Holaaa!</p>
+        <p className="hola animate__animated animate__fadeInUp">Holaaa!</p>
         <p className="soy animate__animated animate__fadeInUp animate__delay-1s">Soy <span className="maru">Maru :)</span></p>
       </div>
       <div className="form-1"></div>

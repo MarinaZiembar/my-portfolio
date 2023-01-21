@@ -1,0 +1,64 @@
+
+//Home Animations
+
+@mixin expandingStripe($stripeWidth){
+    @keyframes expandingStripe{
+        from{
+            height:0;
+        }
+        to{
+            height: 100%;
+        }
+    }
+}
+@mixin floatingDot($firstPositionY, $firstPositionX, $dotName){
+    @keyframes float#{$dotName}{
+        @for $i from 0 through 500{
+
+            $currentPositionX:$firstPositionX * $i;
+            $currentPositionY:$firstPositionY * $i;
+
+            @if($dotName == "Yellow"){
+                #{$i + "%"}{
+                    top:$currentPositionY;
+                    left:$currentPositionX;
+                }
+            }
+            @if($dotName == "Blue"){
+                #{$i + "%"}{
+                    bottom:$currentPositionY;
+                    left:$currentPositionX;
+                }
+            }
+            @if($dotName == "Pink"){
+                #{$i + "%"}{
+                    bottom:$currentPositionY;
+                    right:$currentPositionX;
+                }
+            }
+            @if($dotName == "White"){
+                #{$i + "%"}{
+                    top:$currentPositionY;
+                    right:$currentPositionX;
+                }
+            }
+        }
+    }
+}
+@keyframes resizeTypo{
+    from{
+        font-size: 180px;
+    }
+    to{
+        font-size: 100px;
+    }
+}
+@keyframes wavyWaves{
+    0%{
+        object-position: center 0px;
+    }
+    100%{
+        object-position: center -500px;
+    }
+}
+

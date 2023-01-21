@@ -1,11 +1,44 @@
-// https://i.pinimg.com/564x/88/13/50/88135019f21709306bb33c3a6d18c0ca.jpg
 
-$cream:#faf4e9;
-$light-pink:#f7b0be;
-$pink:#ed8e83;
-$red:#ef3c23;
-$light-red:#f15a42;
-$yellow:#fac92c;
-$aqua:#cfe5cc;
-$light-blue:#2178ae;
-$blue:#1b4793;
+//Site colors
+$dark-green:#003844;
+$green:#006C67;
+$pink:#F194B4;
+$yellow:#FFB100;
+$white:#FFFFFA;
+
+
+//Home animation palettes
+$home-first:(
+    "bk":#fff, 
+    "hola": 3px #000, 
+    "soy": #000, 
+    "maru":#000
+);
+$home-second:(
+    "bk":#343779, 
+    "hola": 3px #fff, 
+    "soy": #fff, 
+    "maru":#E4B41B, 
+    "maru-shadow": -5px 5px #f86041,
+    "form-1":#33a9ac,
+    "form-2":#E4B41B,
+    "form-3":#f86041,
+    "form-4":#982062,
+);
+$home-third:(
+    "bk":#202020, 
+    "hola":#CFCDCE,
+    "hola-shadow": -5px 5px #5798A7, 
+    "soy": #E4B518, 
+    "maru":#EC6D5D, 
+    "form-1":#5798A7,
+    "form-2":#E4B41B,
+    "form-3":#EC6D5D,
+    "form-4":#CFCDCE,
+);
+$home-fourth:( 
+    "hola":#131C30,
+    "soy": #131C30, 
+    "maru":#131C30, 
+    "form-1":#B0E76C,
+);

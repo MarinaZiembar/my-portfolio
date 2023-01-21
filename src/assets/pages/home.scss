@@ -1,3 +1,4 @@
+//Home animation styles
 
 .home-first{
     height: 100vh;
@@ -5,14 +6,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: white;
+    background-color: map.get($home-first, "bk");
     .data-container{
         position:relative;
         padding:50px;
         .hola{
             font-size: 180px;
             font-weight: 600;
-            -webkit-text-stroke: 3px black;
+            -webkit-text-stroke: map.get($home-first, "hola");
             color:transparent;
             position: relative;
             --animate-duration: 0.8s;
@@ -21,7 +22,7 @@
             margin-top: -70px;
             font-size: 180px;
             font-weight: 600;
-            color:black;
+            color:map.get($home-first, "soy");
             --animate-delay: 0.3s;
             --animate-duration: 0.8s;
         }
@@ -29,10 +30,13 @@
             margin-top: -70px;
             font-size: 180px;
             font-weight: 600;
-            color:black;
+            color:map.get($home-first, "maru");
         }
     }
-    .form-1,.form-2,.form-3,.form-4{
+    .form-1,
+    .form-2,
+    .form-3,
+    .form-4{
         display:none;
     }
 }
@@ -43,14 +47,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #343779;
+    background-color: map.get($home-second, "bk");
     .data-container{
         position:relative;
         padding:50px;
         .hola{
             font-size: 180px;
             font-weight: 600;
-            -webkit-text-stroke: 3px white;
+            -webkit-text-stroke: map.get($home-second, "hola");
             color:transparent;
             position: relative;
         }
@@ -58,15 +62,15 @@
             margin-top: -70px;
             font-size: 180px;
             font-weight: 600;
-            color:white;
+            color:map.get($home-second, "soy");
             animation-delay: 0s;
         }
         .maru{
             margin-top: -70px;
             font-size: 180px;
             font-weight: 600;
-            color:#E4B41B;
-            text-shadow: -5px 5px #f86041;
+            color:map.get($home-second, "maru");
+            text-shadow: map.get($home-second, "maru-shadow");
         }
     }
     .form-1{
@@ -76,7 +80,7 @@
         height:100vh;
         width:100px;
         z-index:100;
-        background-color: #33a9ac;
+        background-color: map.get($home-second, "form-1");
         @include expandingStripe(100px);
         animation-name: expandingStripe;
         animation-duration: 0.8s;
@@ -88,7 +92,7 @@
         height:100vh;
         width:200px;
         z-index:90;
-        background-color: #E4B41B;
+        background-color: map.get($home-second, "form-2");
         box-shadow: inset -113px 0px 8px -4px rgba(0,0,0,0.1);
         @include expandingStripe(200px);
         animation-name: expandingStripe;
@@ -101,7 +105,7 @@
         height:100vh;
         z-index:80;
         width:300px;
-        background-color: #f86041;
+        background-color: map.get($home-second, "form-3");
         box-shadow: inset -216px 0px 8px -4px rgba(0,0,0,0.1);
         @include expandingStripe(300px);
         animation-name: expandingStripe;
@@ -114,7 +118,7 @@
         height:100vh;
         width:400px;
         z-index:70;
-        background-color: #982062;
+        background-color: map.get($home-second, "form-4");
         box-shadow: inset -319px 0px 8px -4px rgba(0,0,0,0.1);
         @include expandingStripe(400px);
         animation-name: expandingStripe;
@@ -128,28 +132,28 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #202020;
+    background-color: map.get($home-third, "bk");
     .data-container{
         position:relative;
         padding:50px;
         .hola{
             font-size: 180px;
             font-weight: 600;
-            text-shadow:-5px 5px #5798A7;
-            color:#CFCDCE;
+            text-shadow:map.get($home-third, "hola-shadow");
+            color:map.get($home-third, "hola");
             position: relative;
         }
         .soy{
             margin-top: -70px;
             font-size: 180px;
             font-weight: 600;
-            color:#E4B518;
+            color:map.get($home-third, "soy");
         }
         .maru{
             margin-top: -70px;
             font-size: 180px;
             font-weight: 600;
-            color:#EC6D5D;
+            color:map.get($home-third, "maru");
         }
     }
     .form-1{
@@ -158,7 +162,7 @@
         width:40px;
         z-index:100;
         border-radius: 50%;
-        background-color: #5798A7;
+        background-color: map.get($home-third, "form-1");
         animation-name: floatBlue;
         animation-timing-function: ease;
         animation-iteration-count: infinite;
@@ -172,7 +176,7 @@
         width:60px;
         z-index:100;
         border-radius: 50%;
-        background-color: #E4B41B;
+        background-color: map.get($home-third, "form-2");
         animation-name: floatYellow;
         animation-timing-function: ease;
         animation-iteration-count: infinite;
@@ -186,7 +190,7 @@
         width:80px;
         z-index:100;
         border-radius: 50%;
-        background-color: #EC6D5D;
+        background-color: map.get($home-third, "form-3");
         animation-name: floatPink;
         animation-timing-function: ease;
         animation-iteration-count: infinite;
@@ -200,7 +204,7 @@
         width:120px;
         z-index:100;
         border-radius: 50%;
-        background-color: #CFCDCE;
+        background-color: map.get($home-third, "form-4");
         animation-name: floatWhite;
         animation-timing-function: ease;
         animation-iteration-count: infinite;
@@ -222,21 +226,21 @@
         .hola{
             font-size: 180px;
             font-weight: 600;
-            color:#131C30;
+            color: map.get($home-fourth, "hola");
             position: relative;
         }
         .soy{
             margin-top: -70px;
             font-size: 180px;
             font-weight: 600;
-            color:#131C30;
+            color: map.get($home-fourth, "soy");
             animation-delay:0s;
         }
         .maru{
             margin-top: -70px;
             font-size: 180px;
             font-weight: 600;
-            color:#131C30;
+            color: map.get($home-fourth, "maru");
         }
     }
     .form-1{
@@ -244,7 +248,7 @@
         z-index:-1;
         top:0;
         left:0;
-        background-color: #B0E76C;
+        background-color:  map.get($home-fourth, "form-1");
         height:100%;
         width:110%;
         object-fit: cover;
