@@ -1,0 +1,362 @@
+
+.home-first{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    .data-container{
+        position:relative;
+        padding:50px;
+        .hola{
+            font-size: 180px;
+            font-weight: 600;
+            -webkit-text-stroke: 3px black;
+            color:transparent;
+            position: relative;
+            --animate-duration: 0.8s;
+        }
+        .soy{
+            margin-top: -70px;
+            font-size: 180px;
+            font-weight: 600;
+            color:black;
+            --animate-delay: 0.3s;
+            --animate-duration: 0.8s;
+        }
+        .maru{
+            margin-top: -70px;
+            font-size: 180px;
+            font-weight: 600;
+            color:black;
+        }
+    }
+    .form-1,.form-2,.form-3,.form-4{
+        display:none;
+    }
+}
+
+.home-second{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #343779;
+    .data-container{
+        position:relative;
+        padding:50px;
+        .hola{
+            font-size: 180px;
+            font-weight: 600;
+            -webkit-text-stroke: 3px white;
+            color:transparent;
+            position: relative;
+        }
+        .soy{
+            margin-top: -70px;
+            font-size: 180px;
+            font-weight: 600;
+            color:white;
+            animation-delay: 0s;
+        }
+        .maru{
+            margin-top: -70px;
+            font-size: 180px;
+            font-weight: 600;
+            color:#E4B41B;
+            text-shadow: -5px 5px #f86041;
+        }
+    }
+    .form-1{
+        position:absolute;
+        right:0;
+        top:0;
+        height:100vh;
+        width:100px;
+        z-index:100;
+        background-color: #33a9ac;
+        @include expandingStripe(100px);
+        animation-name: expandingStripe;
+        animation-duration: 0.8s;
+    }
+    .form-2{
+        position:absolute;
+        right:0;
+        top:0;
+        height:100vh;
+        width:200px;
+        z-index:90;
+        background-color: #E4B41B;
+        box-shadow: inset -113px 0px 8px -4px rgba(0,0,0,0.1);
+        @include expandingStripe(200px);
+        animation-name: expandingStripe;
+        animation-duration: 0.8s;
+    }
+    .form-3{
+        position:absolute;
+        right:0;
+        top:0;
+        height:100vh;
+        z-index:80;
+        width:300px;
+        background-color: #f86041;
+        box-shadow: inset -216px 0px 8px -4px rgba(0,0,0,0.1);
+        @include expandingStripe(300px);
+        animation-name: expandingStripe;
+        animation-duration: 0.8s;
+    }
+    .form-4{
+        position:absolute;
+        right:0;
+        top:0;
+        height:100vh;
+        width:400px;
+        z-index:70;
+        background-color: #982062;
+        box-shadow: inset -319px 0px 8px -4px rgba(0,0,0,0.1);
+        @include expandingStripe(400px);
+        animation-name: expandingStripe;
+        animation-duration: 0.8s;
+    }
+}
+
+.home-third{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #202020;
+    .data-container{
+        position:relative;
+        padding:50px;
+        .hola{
+            font-size: 180px;
+            font-weight: 600;
+            text-shadow:-5px 5px #5798A7;
+            color:#CFCDCE;
+            position: relative;
+        }
+        .soy{
+            margin-top: -70px;
+            font-size: 180px;
+            font-weight: 600;
+            color:#EC6D5D;
+        }
+        .maru{
+            margin-top: -70px;
+            font-size: 180px;
+            font-weight: 600;
+            color:#E4B518;
+        }
+    }
+    .form-1{
+        position:absolute;
+        height:40px;
+        width:40px;
+        z-index:100;
+        border-radius: 50%;
+        background-color: #5798A7;
+        animation-name: floatBlue;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration:10s;
+        @include floatingDot(5px, 10px, "Blue");
+    }
+    .form-2{
+        position:absolute;
+        height:60px;
+        width:60px;
+        z-index:100;
+        border-radius: 50%;
+        background-color: #E4B41B;
+        animation-name: floatYellow;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration:10s;
+        @include floatingDot(3px, 15px, "Yellow");
+    }
+    .form-3{
+        position:absolute;
+        height:80px;
+        width:80px;
+        z-index:100;
+        border-radius: 50%;
+        background-color: #EC6D5D;
+        animation-name: floatPink;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration:10s;
+        @include floatingDot(30px, 4px, "Pink");
+    }
+    .form-4{
+        position:absolute;
+        height:120px;
+        width:120px;
+        z-index:100;
+        border-radius: 50%;
+        background-color: #CFCDCE;
+        animation-name: floatWhite;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-duration:10s;
+        @include floatingDot(5px, 10px, "White");
+    }
+}
+
+.home-fourth{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .data-container{
+        position:relative;
+        padding:50px;
+        .hola{
+            font-size: 180px;
+            font-weight: 600;
+            color:#131C30;
+            position: relative;
+        }
+        .soy{
+            margin-top: -70px;
+            font-size: 180px;
+            font-weight: 600;
+            color:#131C30;
+            animation-delay:0s;
+        }
+        .maru{
+            margin-top: -70px;
+            font-size: 180px;
+            font-weight: 600;
+            color:#131C30;
+        }
+    }
+    .form-1{
+        position:absolute;
+        z-index:-1;
+        top:0;
+        left:0;
+        background-color: #B0E76C;
+        height:100%;
+        width:110%;
+        object-fit: cover;
+        animation-name: wavyWaves;
+        animation-duration:2s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        content:url('../../images/waves.svg')
+    }
+    
+}
+
+// .home-fifth{
+//     height: 100vh;
+//     width: 100vw;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     background-color: #202020;
+//     .data-container{
+//         position:relative;
+//         padding:50px;
+//         .hola{
+//             font-size: 180px;
+//             font-weight: 600;
+//             text-shadow:-5px 5px #5798A7;
+//             color:#CFCDCE;
+//             position: relative;
+//             animation-name:resizeTypo;
+//             animation-duration: 1s;
+//             animation-timing-function: ease;
+//             animation-direction: normal;
+//             animation-fill-mode: forwards;
+//         }
+//         .soy{
+//             margin-top: -50px;
+//             font-size: 180px;
+//             font-weight: 600;
+//             color:#EC6D5D;
+//             animation-name:resizeTypo;
+//             animation-duration: 1s;
+//             animation-timing-function: ease;
+//             animation-direction: normal;
+//             animation-fill-mode: forwards;
+//             animation-delay: 0s;
+//         }
+//         .maru{
+//             margin-top: -50px;
+//             font-size: 180px;
+//             font-weight: 600;
+//             color:#E4B518;
+//             animation-name:resizeTypo;
+//             animation-duration: 1s;
+//             animation-timing-function: ease;
+//             animation-direction: normal;
+//             animation-fill-mode: forwards;
+//         }
+//     }
+//     .form-1{
+//         position:absolute;
+//         height:40px;
+//         width:40px;
+//         z-index:100;
+//         border-radius: 50%;
+//         background-color: #5798A7;
+//         animation-name: floatBlue;
+//         animation-timing-function: ease;
+//         animation-iteration-count: infinite;
+//         animation-direction: alternate;
+//         animation-duration:10s;
+//         @include floatingDot(5px, 10px, "Blue");
+//     }
+//     .form-2{
+//         position:absolute;
+//         height:60px;
+//         width:60px;
+//         z-index:100;
+//         border-radius: 50%;
+//         background-color: #E4B41B;
+//         animation-name: floatYellow;
+//         animation-timing-function: ease;
+//         animation-iteration-count: infinite;
+//         animation-direction: alternate;
+//         animation-duration:10s;
+//         @include floatingDot(3px, 15px, "Yellow");
+//     }
+//     .form-3{
+//         position:absolute;
+//         height:80px;
+//         width:80px;
+//         z-index:100;
+//         border-radius: 50%;
+//         background-color: #EC6D5D;
+//         animation-name: floatPink;
+//         animation-timing-function: ease;
+//         animation-iteration-count: infinite;
+//         animation-direction: alternate;
+//         animation-duration:10s;
+//         @include floatingDot(30px, 4px, "Pink");
+//     }
+//     .form-4{
+//         position:absolute;
+//         height:120px;
+//         width:120px;
+//         z-index:100;
+//         border-radius: 50%;
+//         background-color: #CFCDCE;
+//         animation-name: floatWhite;
+//         animation-timing-function: ease;
+//         animation-iteration-count: infinite;
+//         animation-direction: alternate;
+//         animation-duration:10s;
+//         @include floatingDot(5px, 10px, "White");
+//     }
+// }
