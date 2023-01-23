@@ -24,14 +24,14 @@ function Home() {
 
   //Effects
   useEffect(() => {
-    className !== "home-fourth" && changeClassName(className);
+    className !== "home-fifth" && changeClassName(className);
   },[className])
   
   
   return (
     <div className={className}>
       <div className="data-container">
-        <p className="hola animate__animated animate__fadeInUp">Holaaa!</p>
+        <p className="hola animate__animated animate__fadeInUp">Holaaa<span className="exclamation-mark">!</span></p>
         <p className="soy animate__animated animate__fadeInUp animate__delay-1s">Soy <span className="maru">Maru :)</span></p>
       </div>
       <div className="form-1"></div>

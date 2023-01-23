@@ -139,8 +139,8 @@
         .hola{
             font-size: 180px;
             font-weight: 600;
-            text-shadow:map.get($home-third, "hola-shadow");
-            color:map.get($home-third, "hola");
+            text-shadow: map.get($home-third, "hola-shadow");
+            color: map.get($home-third, "hola");
             position: relative;
         }
         .soy{
@@ -261,106 +261,127 @@
     
 }
 
-// .home-fifth{
-//     height: 100vh;
-//     width: 100vw;
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     background-color: #202020;
-//     .data-container{
-//         position:relative;
-//         padding:50px;
-//         .hola{
-//             font-size: 180px;
-//             font-weight: 600;
-//             text-shadow:-5px 5px #5798A7;
-//             color:#CFCDCE;
-//             position: relative;
-//             animation-name:resizeTypo;
-//             animation-duration: 1s;
-//             animation-timing-function: ease;
-//             animation-direction: normal;
-//             animation-fill-mode: forwards;
-//         }
-//         .soy{
-//             margin-top: -50px;
-//             font-size: 180px;
-//             font-weight: 600;
-//             color:#EC6D5D;
-//             animation-name:resizeTypo;
-//             animation-duration: 1s;
-//             animation-timing-function: ease;
-//             animation-direction: normal;
-//             animation-fill-mode: forwards;
-//             animation-delay: 0s;
-//         }
-//         .maru{
-//             margin-top: -50px;
-//             font-size: 180px;
-//             font-weight: 600;
-//             color:#E4B518;
-//             animation-name:resizeTypo;
-//             animation-duration: 1s;
-//             animation-timing-function: ease;
-//             animation-direction: normal;
-//             animation-fill-mode: forwards;
-//         }
-//     }
-//     .form-1{
-//         position:absolute;
-//         height:40px;
-//         width:40px;
-//         z-index:100;
-//         border-radius: 50%;
-//         background-color: #5798A7;
-//         animation-name: floatBlue;
-//         animation-timing-function: ease;
-//         animation-iteration-count: infinite;
-//         animation-direction: alternate;
-//         animation-duration:10s;
-//         @include floatingDot(5px, 10px, "Blue");
-//     }
-//     .form-2{
-//         position:absolute;
-//         height:60px;
-//         width:60px;
-//         z-index:100;
-//         border-radius: 50%;
-//         background-color: #E4B41B;
-//         animation-name: floatYellow;
-//         animation-timing-function: ease;
-//         animation-iteration-count: infinite;
-//         animation-direction: alternate;
-//         animation-duration:10s;
-//         @include floatingDot(3px, 15px, "Yellow");
-//     }
-//     .form-3{
-//         position:absolute;
-//         height:80px;
-//         width:80px;
-//         z-index:100;
-//         border-radius: 50%;
-//         background-color: #EC6D5D;
-//         animation-name: floatPink;
-//         animation-timing-function: ease;
-//         animation-iteration-count: infinite;
-//         animation-direction: alternate;
-//         animation-duration:10s;
-//         @include floatingDot(30px, 4px, "Pink");
-//     }
-//     .form-4{
-//         position:absolute;
-//         height:120px;
-//         width:120px;
-//         z-index:100;
-//         border-radius: 50%;
-//         background-color: #CFCDCE;
-//         animation-name: floatWhite;
-//         animation-timing-function: ease;
-//         animation-iteration-count: infinite;
-//         animation-direction: alternate;
-//         animation-duration:10s;
-//         @include floatingDot(5px, 10px, "White");
-//     }
-// }
+.home-fifth{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: $white;
+    .data-container{
+        position:relative;
+        padding:50px;
+        z-index:10;
+        .hola{
+            font-size: 180px;
+            font-weight: 600;
+            text-shadow:-7px 7px $yellow;
+            -webkit-text-stroke:3px #202020;
+            color:transparent;
+            position: relative;
+            cursor:default;
+            .exclamation-mark{
+                display:inline-block;
+                transform:rotate(0deg);
+                transition: all 0.4s ease;
+            }
+            // animation-name:resizeTypo;
+            // animation-duration: 1s;
+            // animation-timing-function: ease;
+            // animation-direction: normal;
+            // animation-fill-mode: forwards;
+            &:hover{
+                .exclamation-mark{
+                    display:inline-block;
+                    transform:rotate(8deg);
+                    transition: all 0.4s ease;
+                }
+            }
+        }
+        .soy{
+            margin-top: -50px;
+            font-size: 180px;
+            font-weight: 600;
+            color:$green;
+            // animation-name:resizeTypo;
+            // animation-duration: 1s;
+            // animation-timing-function: ease;
+            // animation-direction: normal;
+            // animation-fill-mode: forwards;
+            // animation-delay: 0s;
+        }
+        .maru{
+            margin-top: -50px;
+            font-size: 180px;
+            font-weight: 600;
+            color:$pink;
+            transition: all 0.4s ease;
+            cursor:default;
+            content:attr(data-descr);
+            // animation-name:resizeTypo;
+            // animation-duration: 1s;
+            // animation-timing-function: ease;
+            // animation-direction: normal;
+            // animation-fill-mode: forwards;
+            &:hover{
+                -webkit-text-stroke:2px #fff;
+                text-shadow: -5px 5px $yellow, -10px 10px $green;
+                transition: all 0.4s ease;
+                content:'Maru ;)';
+            }
+        }
+    }
+    .form-1{
+        position:absolute;
+        height:800px;
+        width:800px;
+        z-index:0;
+        opacity:0.1;
+        background-color: $yellow;
+        border-radius: 58% 42% 70% 30% / 30% 30% 70% 70% ;
+        animation-name:moveYellow;
+        animation-duration: 80s;
+        animation-timing-function: ease-in;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        @include moveGiantDots(-250px, 20px, 200px, 100px, "Yellow");
+    }
+    .form-2{
+        position:absolute;
+        height:700px;
+        width:700px;
+        z-index:0;
+        opacity:0.15;
+        background-color: $pink;
+        border-radius: 50% 50% 37% 63% / 20% 59% 41% 80% ;
+        animation-name:movePink;
+        animation-duration: 100s;
+        animation-timing-function: ease-in;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        @include moveGiantDots(-100px, 1500px, 200px, 100px, "Pink");
+    }
+    .form-3{
+        position:absolute;
+        height:500px;
+        width:500px;
+        z-index:0;
+        opacity:0.15;
+        background-color: $green;
+        border-radius: 50% 50% 37% 63% / 73% 40% 60% 27% ;
+        animation-name:moveGreen;
+        animation-duration: 80s;
+        animation-timing-function: ease-in;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        @include moveGiantDots(600px, 800px, 400px, 600px,"Green");
+    }
+    // .form-4{
+    //     position:absolute;
+    //     height:120px;
+    //     width:120px;
+    //     z-index:100;
+    //     border-radius: 50%;
+    //     background-color: #CFCDCE;
+    // }
+}

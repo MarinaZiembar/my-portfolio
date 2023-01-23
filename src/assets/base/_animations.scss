@@ -13,10 +13,10 @@
 }
 @mixin floatingDot($firstPositionY, $firstPositionX, $dotName){
     @keyframes float#{$dotName}{
-        @for $i from 0 through 500{
+        @for $i from 0 through 50{
 
-            $currentPositionX:$firstPositionX * $i;
-            $currentPositionY:$firstPositionY * $i;
+            $currentPositionX: $firstPositionX * $i;
+            $currentPositionY: $firstPositionY * $i;
 
             @if($dotName == "Yellow"){
                 #{$i + "%"}{
@@ -59,6 +59,16 @@
     }
     100%{
         object-position: center -500px;
+    }
+}
+@mixin moveGiantDots($firstPositionY, $firstPositionX, $lastPositionY, $lastPositionX, $dotName){
+    @keyframes move#{$dotName}{
+        from{
+            transform:translate($firstPositionX, $firstPositionY);
+        }
+        to{
+            transform:translate($lastPositionX, $lastPositionY);
+        }
     }
 }
 
