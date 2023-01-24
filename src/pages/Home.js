@@ -1,10 +1,13 @@
 import { useEffect, useState } from "react";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 
-function Home() {
+function Home({audioPlay, setAudioPlay}) {
 
   //States
   const [className, setClassName] = useState("home-first");
+  const [showLayout, setShowLayout] = useState(false);
 
   //Methods
   const changeClassName = (className) => {
@@ -18,7 +21,7 @@ function Home() {
       setTimeout(() => setClassName("home-fourth"),1500);
     }
     if(className === "home-fourth"){
-      setTimeout(() => setClassName("home-fifth"),1500);
+      setTimeout(() => {setClassName("home-fifth");setShowLayout(true);},1500);
     }
   }
 
@@ -30,14 +33,23 @@ function Home() {
   
   return (
     <div className={className}>
+      {showLayout &&
+        <Header/>
+      }
       <div className="data-container">
-        <p className="hola animate__animated animate__fadeInUp">Holaaa<span className="exclamation-mark">!</span></p>
+        <span className="hola animate__animated animate__fadeInUp">Holaaa<span className="exclamation-mark">!</span></span>
         <p className="soy animate__animated animate__fadeInUp animate__delay-1s">Soy <span className="maru">Maru :)</span></p>
       </div>
       <div className="form-1"></div>
       <div className="form-2"></div>
       <div className="form-3"></div>
       <div className="form-4"></div>
+      {showLayout &&
+        <Footer
+          handleSwitchValue={() => setAudioPlay(!audioPlay)}
+          switchValue={audioPlay}
+        />
+      }
     </div>
   );
 }

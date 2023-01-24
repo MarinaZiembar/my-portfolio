@@ -55,10 +55,10 @@
 }
 @keyframes wavyWaves{
     0%{
-        object-position: center 0px;
+        object-position: 0px 0px;
     }
     100%{
-        object-position: center -500px;
+        object-position: 0px -400px;
     }
 }
 @mixin moveGiantDots($firstPositionY, $firstPositionX, $lastPositionY, $lastPositionX, $dotName){

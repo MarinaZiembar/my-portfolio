@@ -16,7 +16,6 @@
             -webkit-text-stroke: map.get($home-first, "hola");
             color:transparent;
             position: relative;
-            --animate-duration: 0.8s;
         }
         .soy{
             margin-top: -70px;
@@ -256,7 +255,7 @@
         animation-duration:4s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
-        content:url('../../images/waves.svg')
+        content:url('../../images/waves.svg');
     }
     
 }
@@ -384,4 +383,163 @@
     //     border-radius: 50%;
     //     background-color: #CFCDCE;
     // }
+}
+
+
+//Mediaqueries
+@include ms-mobile{
+    .home-first,.home-second,.home-third,.home-fourth,.home-fifth{
+        .data-container{
+            padding: 50px 20px;
+        }
+        .hola,.soy,.maru{
+            font-size: 80px !important;
+        }
+        .soy{
+            margin-top: -19px !important;
+            line-height: 90px;
+        }
+    }
+    .home-fifth .data-container .hola{
+        text-shadow: -4px 4px #ffb100;
+        -webkit-text-stroke: 1px #202020;
+    }
+    .home-fifth{
+        .form-1{
+            width:100px;
+            height:100px;
+        }
+        .form-2{
+            width:200px;
+            height:200px;
+            @include moveGiantDots(-100px, 100px, 200px, 100px, "Pink");
+        }
+        .form-3{
+            width:50px;
+            height:50px;
+            @include moveGiantDots(200px, 200px, 400px, 300px,"Green");
+        }
+    }
+    .home-first{
+        .hola{
+            -webkit-text-stroke: 1px black !important;
+        }
+    }
+    .home-second{
+        .data-container{
+            position:relative;
+            z-index:200;
+        }
+        .hola{
+            -webkit-text-stroke: 1px $white !important;
+        }
+        .form-1{
+            width:20px;
+        }
+        .form-2{
+            width:40px;
+        }
+        .form-3{
+            width:60px;
+        }
+        .form-4{
+            width:80px;
+        }
+    }
+}
+@include ms-tablet{
+    .home-first,.home-second,.home-third,.home-fourth,.home-fifth{
+        .data-container{
+            padding: 50px 20px;
+        }
+        .hola,.soy,.maru{
+            font-size: 100px !important;
+        }
+        .soy{
+            margin-top: -36px !important;
+            line-height: 162px;
+        }
+    }
+    .home-fifth .data-container .hola{
+        text-shadow: -4px 4px #ffb100;
+        -webkit-text-stroke: 2px #202020;
+    }
+    .home-fifth{
+        .form-1{
+            width:300px;
+            height:300px;
+        }
+        .form-2{
+            width:500px;
+            height:500px;
+            @include moveGiantDots(-100px, 200px, 200px, 100px, "Pink");
+        }
+        .form-3{
+            width:200px;
+            height:200px;
+            @include moveGiantDots(200px, 200px, 400px, 400px,"Green");
+        }
+    }
+    .home-second{
+        .form-1{
+            width:40px;
+        }
+        .form-2{
+            width:80px;
+        }
+        .form-3{
+            width:120px;
+        }
+        .form-4{
+            width:160px;
+        }
+    }
+}
+@include ms-tablet-lg{
+    .home-first,.home-second,.home-third,.home-fourth,.home-fifth{
+        .data-container{
+            padding: 50px 20px;
+        }
+        .hola,.soy,.maru{
+            font-size: 150px !important;
+        }
+        .soy{
+            margin-top: -36px !important;
+            line-height: 162px;
+        }
+    }
+    .home-fifth .data-container .hola{
+        text-shadow: -7px 7px #ffb100;
+        -webkit-text-stroke: 3px #202020;
+    }
+    .home-fifth{
+        .form-1{
+            width:500px;
+            height:500px;
+        }
+        .form-2{
+            width:700px;
+            height:700px;
+            @include moveGiantDots(-100px, 200px, 200px, 100px, "Pink");
+        }
+        .form-3{
+            width:300px;
+            height:300px;
+            @include moveGiantDots(200px, 200px, 400px, 400px,"Green");
+        }
+    }
+    .home-second{
+        .form-1{
+            width:40px;
+        }
+        .form-2{
+            width:80px;
+        }
+        .form-3{
+            width:120px;
+        }
+        .form-4{
+            width:160px;
+        }
+    }
 }

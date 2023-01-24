@@ -1,0 +1,25 @@
+footer{
+    position: absolute;
+    bottom:0;
+    width: -webkit-fill-available;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px 24px;
+    span{
+        font-size: 12px;
+        letter-spacing: 0.3;
+        font-weight: 300;
+        cursor: url("../../images/heart-cursor.svg"), default;
+    }
+    .react-switch-bg div{
+        top: 0px !important;
+        right: -4px !important;
+    }
+}
+
+@include ms-mobile{
+    footer{
+        justify-content: center;
+    }
+}

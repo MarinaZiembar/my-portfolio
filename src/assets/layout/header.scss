@@ -1,0 +1,152 @@
+header{
+    position:fixed;
+    z-index: 300000;
+    top:0;
+    left:0;
+    width:-webkit-fill-available;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:24px;
+    .hambuerguer-button{
+        display:none;
+    }
+    img{
+        width:32px;
+        filter: invert(32%) sepia(21%) saturate(2129%) hue-rotate(132deg) brightness(96%) contrast(101%);
+        transition:all 0.5s ease;
+        &:hover{
+            filter: invert(70%) sepia(63%) saturate(2210%) hue-rotate(359deg) brightness(103%) contrast(105%);
+            transition:all 0.5s ease;
+        }
+    }
+    ul{
+        margin:0;
+        padding:0;
+        list-style-type: none;
+        display: flex;
+        li{
+            padding:0px 24px;
+            font-weight:600;
+            font-size: 20px;
+            &:last-of-type{
+                padding-right:0;
+            }
+            a{
+                text-decoration: none;
+                color:#202020d9;
+            }
+            .link-wrapper{
+                position: relative;
+                display: inline-block;
+                &:hover .hover-link-wrapper {
+                    width: 100%;
+                }
+                .hover-link-wrapper{
+                    position: absolute;
+                    display: inline-block;
+                    overflow: hidden;
+                    width: 0;
+                    display: inline-block;
+                    white-space: pre;
+                    transition: width 500ms;
+                    padding-bottom: 0.15em;
+                }
+            }   
+            &:nth-of-type(1) .link-wrapper .hover-link-wrapper{
+                border-bottom: 3px solid $pink;
+                a{
+                    color: $pink;
+                }
+            }
+            &:nth-of-type(2) .link-wrapper .hover-link-wrapper{
+                border-bottom: 3px solid $yellow;
+                a{
+                    color: $yellow;
+                }
+            }
+            &:nth-of-type(3) .link-wrapper .hover-link-wrapper{
+                border-bottom: 3px solid $green;
+                a{
+                    color: $green;
+                }
+            }
+            &:nth-of-type(4) .link-wrapper .hover-link-wrapper{
+                border-bottom: 3px solid $dark-green;
+                a{
+                    color: $dark-green;
+                }
+            }
+        }
+    }
+}
+
+//Mediaqueries
+@include ms-mobile{
+    header{
+        padding: 15px;
+        a{
+            display: flex;
+            align-items: center;
+        }
+    }
+    .hamburguer-button{
+        display: flex;
+        flex-direction: column;
+        position:relative;
+        z-index:3000;
+        .button-bar{
+            width:30px;
+            height:3px;
+            margin-bottom: 4px;
+            border-radius: 4px;
+            border:1px solid #202020;
+            box-shadow: -2px 2px $green;
+            background-color: $white;
+            transition:all 0.5s ease;
+            &:last-of-type{
+                margin:0;
+            }
+            &.close:first-of-type{
+                transform: rotate(45deg);
+                transform-origin: 14% 166%;
+                transition:all 0.5s ease;
+            }
+            &.close:last-of-type{
+                transform: rotate(-45deg);
+                transform-origin: 50% 50%;
+                transition:all 0.5s ease;
+            }
+        }
+    }
+    .nav{
+        display: none;
+    }
+    .nav-mobile{
+        position:absolute;
+        height:100vh;
+        width:100vw;
+        top:0px;
+        left:0px;
+        justify-content: center;
+        align-items: center;
+        display: flex !important;
+        background-color: $white;
+        ul{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            li{
+                padding:12px 0px;
+                font-size: 26px;
+            }
+        }
+    }
+}
+@include ms-tablet{
+    header ul li{
+        padding: 0px 12px;
+        font-weight: 600;
+        font-size: 16px;
+    }
+}
