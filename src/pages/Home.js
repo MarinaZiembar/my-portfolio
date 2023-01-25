@@ -1,12 +1,18 @@
+import { useContext } from "react";
 import { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import Hero from "../components/Hero";
+import BkForms from "../components/BkForms";
+import { GlobalContext } from "../contexts/globalContext";
 
 
 function Home({audioPlay, setAudioPlay}) {
 
-  //States
+  //Context
   const [className, setClassName] = useState("home-first");
+
+  //States
   const [showLayout, setShowLayout] = useState(false);
 
   //Methods
@@ -30,20 +36,13 @@ function Home({audioPlay, setAudioPlay}) {
     className !== "home-fifth" && changeClassName(className);
   },[className])
   
-  
   return (
     <div className={className}>
       {showLayout &&
         <Header/>
       }
-      <div className="data-container">
-        <span className="hola animate__animated animate__fadeInUp">Holaaa<span className="exclamation-mark">!</span></span>
-        <p className="soy animate__animated animate__fadeInUp animate__delay-1s">Soy <span className="maru">Maru :)</span></p>
-      </div>
-      <div className="form-1"></div>
-      <div className="form-2"></div>
-      <div className="form-3"></div>
-      <div className="form-4"></div>
+      <Hero home/>
+      <BkForms/>
       {showLayout &&
         <Footer
           handleSwitchValue={() => setAudioPlay(!audioPlay)}

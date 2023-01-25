@@ -1,12 +1,13 @@
 import logo from '../images/logo.svg'
 import * as React from "react";
 import { Link } from "react-router-dom";
+import { routes } from '../data/routes';
 import hoverMp3 from '../audio/hover.mp3';
 import hoverOgg from '../audio/hover.ogg';
 import { useState } from 'react';
 
 
-function Header() {
+function Header({animated = true}) {
 
     //States
     const [showNav, setShowNav] = useState(false);
@@ -26,8 +27,8 @@ function Header() {
 
     return (
         <>
-            <header className="animate__animated animate__fadeInDown animate__slow">
-                <Link>
+            <header className={animated && "animate__animated animate__fadeInDown animate__slow"}>
+                <Link to={routes[0].path}>
                     <img src={logo} alt="Logo" />
                 </Link>
                 <div 
@@ -40,99 +41,45 @@ function Header() {
                 </div>
                 <nav className="nav">
                     <ul>
-                        <li 
-                            onMouseOver={() => handlePlayEffect()}
-                            onMouseLeave={() => handlePauseEffect()}
-                        >
-                            <div className='link-wrapper'>
-                                <span className="hover-link-wrapper">
-                                    <Link>Sobre mí</Link>
-                                </span>
-                                <Link>Sobre mí</Link>
-                            </div>
-                        </li>
-                        <li 
-                            onMouseOver={() => handlePlayEffect()}
-                            onMouseLeave={() => handlePauseEffect()}
-                        >
-                            <div className='link-wrapper'>
-                                <span className="hover-link-wrapper">
-                                    <Link>Proyectos</Link>
-                                </span>
-                                <Link>Proyectos</Link>
-                            </div>
-                        </li>
-                        <li 
-                            onMouseOver={() => handlePlayEffect()}
-                            onMouseLeave={() => handlePauseEffect()}
-                        >
-                            <div className='link-wrapper'>
-                                <span className="hover-link-wrapper">
-                                    <Link>Aprendé</Link>
-                                </span>
-                                <Link>Aprendé</Link>
-                            </div>
-                        </li>
-                        <li 
-                            onMouseOver={() => handlePlayEffect()}
-                            onMouseLeave={() => handlePauseEffect()}
-                        >
-                            <div className='link-wrapper'>
-                                <span className="hover-link-wrapper">
-                                    <Link>Contacto</Link>
-                                </span>
-                                <Link>Contacto</Link>
-                            </div>
-                        </li>
+                        {
+                            routes.map((route, i) => (
+                                route.showMenu &&
+                                <li 
+                                    key={i}
+                                    // onMouseOver={() => handlePlayEffect()}
+                                    // onMouseLeave={() => handlePauseEffect()}
+                                >
+                                    <div className='link-wrapper'>
+                                        <span className="hover-link-wrapper">
+                                            <Link to={route.path}>{route.label}</Link>
+                                        </span>
+                                        <Link to={route.path}>{route.label}</Link>
+                                    </div>
+                                </li>
+                            ))
+                        }
                     </ul>
                 </nav>
                 {showNav &&
-                    <nav className="nav-mobile animate__animated animate__slideInRight">
+                    <nav className={animated && "animate__animated animate__fadeInDown animate__slow"}>
                         <ul>
-                            <li 
-                                onMouseOver={() => handlePlayEffect()}
-                                onMouseLeave={() => handlePauseEffect()}
-                            >
-                                <div className='link-wrapper'>
-                                    <span className="hover-link-wrapper">
-                                        <Link>Sobre mí</Link>
-                                    </span>
-                                    <Link>Sobre mí</Link>
-                                </div>
-                            </li>
-                            <li 
-                                onMouseOver={() => handlePlayEffect()}
-                                onMouseLeave={() => handlePauseEffect()}
-                            >
-                                <div className='link-wrapper'>
-                                    <span className="hover-link-wrapper">
-                                        <Link>Proyectos</Link>
-                                    </span>
-                                    <Link>Proyectos</Link>
-                                </div>
-                            </li>
-                            <li 
-                                onMouseOver={() => handlePlayEffect()}
-                                onMouseLeave={() => handlePauseEffect()}
-                            >
-                                <div className='link-wrapper'>
-                                    <span className="hover-link-wrapper">
-                                        <Link>Aprendé</Link>
-                                    </span>
-                                    <Link>Aprendé</Link>
-                                </div>
-                            </li>
-                            <li 
-                                onMouseOver={() => handlePlayEffect()}
-                                onMouseLeave={() => handlePauseEffect()}
-                            >
-                                <div className='link-wrapper'>
-                                    <span className="hover-link-wrapper">
-                                        <Link>Contacto</Link>
-                                    </span>
-                                    <Link>Contacto</Link>
-                                </div>
-                            </li>
+                            {
+                                routes.map((route, i) => (
+                                    route.showMenu &&
+                                    <li 
+                                        key={i}
+                                        // onMouseOver={() => handlePlayEffect()}
+                                        // onMouseLeave={() => handlePauseEffect()}
+                                    >
+                                        <div className='link-wrapper'>
+                                            <span className="hover-link-wrapper">
+                                                <Link to={route.path}>{route.label}</Link>
+                                            </span>
+                                            <Link to={route.path}>{route.label}</Link>
+                                        </div>
+                                    </li>
+                                ))
+                            }
                         </ul>
                     </nav>
                 }

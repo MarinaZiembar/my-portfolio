@@ -5,10 +5,10 @@ import Switch from "react-switch";
 function Footer(props) {
 
     //Props
-    const {handleSwitchValue, switchValue} = props;
+    const {handleSwitchValue, switchValue, animated = true} = props;
 
     return (
-        <footer className="animate__animated animate__fadeInUp animate__slow">
+        <footer className={animated && "animate__animated animate__fadeInUp animate__slow"}>
             <span>©2023 Mar!na Ziembar</span>
             {/* <Switch 
                 onChange={handleSwitchValue} 
