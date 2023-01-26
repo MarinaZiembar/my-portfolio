@@ -17,17 +17,17 @@ function Hero({children, home}) {
 
     return (
         <div className="data-container">
-           { showHero &&
+           {showHero &&
                 <>
-                    <p className={home ? "hola animate__animated animate__fadeInUp" : "hola animate__animated animate__fadeOutUp animate__delay-1s"}>
-                        Holaaa<span className="exclamation-mark">!</span>
+                    <p className="hola animate__animated animate__fadeInUp">
+                        Holaaa<p className="exclamation-mark">!</p>
                     </p>
-                    <p className={home ? "soy animate__animated animate__fadeInUp animate__delay-1s" : "soy animate__animated animate__fadeOutUp animate__delay-1s"}>
-                        Soy <span className="maru">Maru :)</span>
+                    <p className="soy animate__animated animate__fadeInUp animate__delay-1s">
+                        Soy <p className="maru">Maru :)</p>
                     </p>
                 </> 
             }
-            {!showHero && children}
+            {children}
         </div>
     );
   

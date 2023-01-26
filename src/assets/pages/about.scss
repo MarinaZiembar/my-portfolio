@@ -1,0 +1,47 @@
+
+.home-fifth.about{  
+    .data-container{
+        display: flex;
+        flex-direction: column;
+        .hola{
+            display: inline-block;
+            --animate-delay: 0.2s !important;
+            animation-name:resizeTypo;
+            animation-duration: 1s;
+            animation-timing-function: ease;
+            animation-direction: normal;
+            animation-fill-mode: forwards;
+        }
+        .soy{
+            margin-top: -50px;
+            display: inline-block;
+            --animate-delay: 0s !important;
+            animation-name:resizeTypo;
+            animation-duration: 1s;
+            animation-timing-function: ease;
+            animation-direction: normal;
+            animation-fill-mode: forwards;
+        }
+        .maru{
+            display: inline-block;
+            margin-top: -70px;
+            font-size: 180px;
+            font-weight: 600;
+            color:$pink;
+            transition: all 0.4s ease;
+            cursor:default;
+            animation-name:resizeTypo;
+            animation-duration: 1s;
+            animation-timing-function: ease;
+            animation-direction: normal;
+            animation-fill-mode: forwards;
+        }
+    }
+}
+
+.about{
+    .social-container{
+        display: flex !important;
+        margin-top: 20px;
+    }
+}

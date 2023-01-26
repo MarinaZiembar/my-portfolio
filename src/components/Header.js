@@ -61,7 +61,7 @@ function Header({animated = true}) {
                     </ul>
                 </nav>
                 {showNav &&
-                    <nav className={animated && "animate__animated animate__fadeInDown animate__slow"}>
+                    <nav className="nav-mobile">
                         <ul>
                             {
                                 routes.map((route, i) => (

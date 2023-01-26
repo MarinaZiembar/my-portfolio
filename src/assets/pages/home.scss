@@ -16,6 +16,7 @@
             -webkit-text-stroke: map.get($home-first, "hola");
             color:transparent;
             position: relative;
+            display:flex;
         }
         .soy{
             margin-top: -70px;
@@ -24,6 +25,7 @@
             color:map.get($home-first, "soy");
             --animate-delay: 0.3s;
             --animate-duration: 0.8s;
+            display:flex;
         }
         .maru{
             margin-top: -70px;
@@ -56,6 +58,7 @@
             -webkit-text-stroke: map.get($home-second, "hola");
             color:transparent;
             position: relative;
+            display: flex;
         }
         .soy{
             margin-top: -70px;
@@ -63,6 +66,7 @@
             font-weight: 600;
             color:map.get($home-second, "soy");
             animation-delay: 0s;
+            display: flex;
         }
         .maru{
             margin-top: -70px;
@@ -141,12 +145,14 @@
             text-shadow: map.get($home-third, "hola-shadow");
             color: map.get($home-third, "hola");
             position: relative;
+            display: flex;
         }
         .soy{
             margin-top: -70px;
             font-size: 180px;
             font-weight: 600;
             color:map.get($home-third, "soy");
+            display: flex;
         }
         .maru{
             margin-top: -70px;
@@ -227,6 +233,7 @@
             font-weight: 600;
             color: map.get($home-fourth, "hola");
             position: relative;
+            display:flex;
         }
         .soy{
             margin-top: -70px;
@@ -234,6 +241,7 @@
             font-weight: 600;
             color: map.get($home-fourth, "soy");
             animation-delay:0s;
+            display:flex;
         }
         .maru{
             margin-top: -70px;
@@ -279,6 +287,7 @@
             color:transparent;
             position: relative;
             cursor:default;
+            display:flex;
             .exclamation-mark{
                 display:inline-block;
                 transform:rotate(0deg);
@@ -302,6 +311,7 @@
             font-size: 180px;
             font-weight: 600;
             color:$green;
+            display:flex;
             // animation-name:resizeTypo;
             // animation-duration: 1s;
             // animation-timing-function: ease;

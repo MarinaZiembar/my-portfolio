@@ -31,21 +31,95 @@
                 content:'Maru ;)';
             }
         }
+    }
+}
+
+.contact{
+    .main-container{
+        padding:50px;
+    }
+    .title{
+        font-size: 150px;
+        font-weight: 600;
+        text-shadow:-7px 7px $pink;
+        -webkit-text-stroke:3px #202020;
+        color:transparent;
+        position: relative;
+        cursor:default;
+        margin-bottom:-10px;
+    }
+    .subtitle{
+        font-size: 20px;
+        font-weight: 400;
+        width:40%;
+        margin-left:12px;
+        color:#202020
+    }
+    .social-container{
+        display: flex;
+        margin-top: 35px;
+        margin-left:12px;
+    }
+    @include ms-mobile{
+        .main-container{
+            padding: 50px 20px !important;
+        }
         .title{
-            font-size: 150px;
-            font-weight: 600;
-            text-shadow:-7px 7px $pink;
-            -webkit-text-stroke:3px #202020;
-            color:transparent;
-            position: relative;
-            cursor:default;
-            margin-bottom:-10px;
+            font-size: 70px !important;
+            -webkit-text-stroke:1px #202020;
+            text-align: center;
+            margin-bottom: 5px;
         }
         .subtitle{
-            font-size: 20px;
-            font-weight: 400;
-            width:40%;
-            margin-left:12px;
+            font-size: 16px;
+            margin-left:0px;
+            width: 100%;
+        }
+        .social-container{
+            margin-top: 20px;
+            margin-left: 0;
+        }
+    }
+    @include ms-tablet{
+        .title{
+            font-size: 120px !important;
+            -webkit-text-stroke:2px #202020;
+            margin-bottom: -10px;
+        }
+        .subtitle{
+            font-size: 18px;
+            margin-left:0px;
+            width: 80%;
+        }
+        .social-container{
+            margin-top: 30px;
+            margin-left: 0;
+        }
+    }
+    @include ms-tablet-lg{
+        .title{
+            font-size: 120px !important;
+            -webkit-text-stroke:2px #202020;
+            margin-bottom: -10px;
+        }
+        .subtitle{
+            font-size: 18px;
+            margin-left:0px;
+            width: 60%;
+        }
+        .social-container{
+            margin-top: 30px;
+            margin-left: 0;
+        }
+    }
+    @include ms-laptop{
+        .subtitle{
+            width: 60%;
+        }
+    }
+    @include ms-desktop{
+        .subtitle{
+            width: 45%;
         }
     }
 }

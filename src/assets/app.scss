@@ -8,6 +8,7 @@
 @import './base/_general.scss';
 
 //Components
+@import './components/buttons.scss';
 @import './components/cards.scss';
 
 //Layout
@@ -18,3 +19,4 @@
 //Pages
 @import './pages/home.scss';
 @import './pages/contact.scss';
+@import './pages/about.scss';
