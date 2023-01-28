@@ -23,7 +23,7 @@ function Hero({children, home}) {
                         Holaaa<p className="exclamation-mark">!</p>
                     </p>
                     <p className="soy animate__animated animate__fadeInUp animate__delay-1s">
-                        Soy <p className="maru">Maru :)</p>
+                        Soy <p className="maru">&nbsp;Maru :)</p>
                     </p>
                 </> 
             }

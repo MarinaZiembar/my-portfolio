@@ -1,8 +1,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Hero from "../components/Hero";
 import BkForms from "../components/BkForms";
-import {social as rrss} from '../data/social';
+import {contact as rrss} from '../data/social';
 import SocialMediaButton from "../components/SocialMediaButton";
 
 

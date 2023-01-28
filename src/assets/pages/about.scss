@@ -4,6 +4,7 @@
         display: flex;
         flex-direction: column;
         .hola{
+            -webkit-text-stroke:2px #202020;
             display: inline-block;
             --animate-delay: 0.2s !important;
             animation-name:resizeTypo;
@@ -40,8 +41,34 @@
 }
 
 .about{
+    .main-container{
+        height:60%;
+    }
+    .soy{
+        margin-bottom: 10px;
+    }
+    .arrow{
+        cursor:pointer;
+        display: flex;
+        align-items: center;
+        img{
+            width:120px;
+            filter: invert(26%) sepia(99%) saturate(829%) hue-rotate(142deg) brightness(93%) contrast(103%);
+            animation:shake 1s ease 1s infinite;
+        }
+    }
+    .subtitle{
+        font-size: 26px;
+        font-weight: 400;
+        width:40%;
+        color:#202020;
+        margin-top: 0px;
+    }
     .social-container{
         display: flex !important;
         margin-top: 20px;
+    }
+    .about-swiper{
+        height:100%;
     }
 }

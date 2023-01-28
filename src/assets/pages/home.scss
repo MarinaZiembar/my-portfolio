@@ -28,7 +28,6 @@
             display:flex;
         }
         .maru{
-            margin-top: -70px;
             font-size: 180px;
             font-weight: 600;
             color:map.get($home-first, "maru");
@@ -69,7 +68,6 @@
             display: flex;
         }
         .maru{
-            margin-top: -70px;
             font-size: 180px;
             font-weight: 600;
             color:map.get($home-second, "maru");
@@ -155,7 +153,6 @@
             display: flex;
         }
         .maru{
-            margin-top: -70px;
             font-size: 180px;
             font-weight: 600;
             color:map.get($home-third, "maru");
@@ -244,7 +241,6 @@
             display:flex;
         }
         .maru{
-            margin-top: -70px;
             font-size: 180px;
             font-weight: 600;
             color: map.get($home-fourth, "maru");
@@ -320,7 +316,6 @@
             // animation-delay: 0s;
         }
         .maru{
-            margin-top: -70px;
             font-size: 180px;
             font-weight: 600;
             color:$pink;

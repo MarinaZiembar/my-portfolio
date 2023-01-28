@@ -5,6 +5,8 @@ import bkAudio from './audio/bk.mp3'
 import { useState } from 'react';
 import { GlobalProvider } from './contexts/globalContext';
 import { routes } from './data/routes';
+import "swiper/css";
+import "swiper/css/pagination";
 
 
 function App() {
