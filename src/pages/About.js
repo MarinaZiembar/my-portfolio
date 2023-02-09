@@ -54,6 +54,7 @@ function About() {
           </SwiperSlide>
           <SwiperSlide>Slide 3</SwiperSlide>
           <SwiperSlide>Slide 4</SwiperSlide>
+          <SwiperSlide>Slide 4</SwiperSlide>
         </Swiper>
       </div>
       <BkForms/>
