@@ -32,4 +32,9 @@ export const contact = [
         color:"yellow",
         path:"mailto:contacto@holasoymaru.com.ar",
     },
+    {
+        icon:behance,
+        color:"pink<",
+        path:"mailto:contacto@holasoymaru.com.ar",
+    },
 ]
